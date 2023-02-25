@@ -1,0 +1,22 @@
+.img-container {
+  width: 100%;
+  margin: auto;
+}
+
+.turtle {
+  -webkit-mask-image: url("/images/sea_turtle.svg");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  width: 100%;
+}
+
+/* @media only screen and (min-width: 768px) {
+
+} */
+
+@media only screen and (min-width: 1280px) {
+  .turtle {
+    width: 40%;
+  }
+}
