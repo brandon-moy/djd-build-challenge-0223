@@ -1,6 +1,39 @@
+body {
+  background-color: rgb(50 50 107);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.filter {
+  position: absolute;
+  background:
+    linear-gradient(
+      transparent,
+      rgb(6 6 9)
+    );
+  width: 100%;
+  height: 100vh;
+  box-shadow: inset 0 0 100px black;
+}
+
 .img-container {
   width: 100%;
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.img-shadow {
+  width: 100%;
+  background-image: url("/images/sea_turtle.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  -webkit-filter: drop-shadow(1px 1px 24px rgb(180 217 208));
+  transform: rotate(45deg);
+  animation: glow 5s ease-in-out infinite;
 }
 
 .turtle {
@@ -18,5 +51,19 @@
 @media only screen and (min-width: 1280px) {
   .turtle {
     width: 40%;
+  }
+}
+
+@keyframes glow {
+  0% {
+    -webkit-filter: drop-shadow(1px 1px 24px rgb(180 217 208));
+  }
+
+  50% {
+    -webkit-filter: drop-shadow(1px 1px 48px rgb(180 217 208));
+  }
+
+  100% {
+    -webkit-filter: drop-shadow(1px 1px 24px rgb(180 217 208));
   }
 }
