@@ -44,6 +44,22 @@ body {
   width: 100%;
 }
 
+.info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background:
+    linear-gradient(
+      rgb(2 5 31),
+      black
+    );
+  opacity: 0;
+  animation: info 10s ease-in-out 1;
+  animation-fill-mode: forwards;
+}
+
 /* @media only screen and (min-width: 768px) {
 
 } */
@@ -65,5 +81,15 @@ body {
 
   100% {
     -webkit-filter: drop-shadow(1px 1px 24px rgb(180 217 208));
+  }
+}
+
+@keyframes info {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
